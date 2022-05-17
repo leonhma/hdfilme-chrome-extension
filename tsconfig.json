@@ -1,0 +1,9 @@
+{
+    "include": ["src/*.ts"],
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "target": "ES6",
+        "strict": true
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "HDFilme chrome extension",
+  "version": "0.0.1",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.hdfilme.cx/*"
+  ],
+  "content_scripts": [
+   {
+     "matches": ["*://hdfilme.cx/submit-coupon"],
+     "js": ["content-scripts/submit-coupon.ts"]
+   }
+ ]
+}
