@@ -8,10 +8,15 @@
   "host_permissions": [
     "*://*.hdfilme.cx/*"
   ],
+  "background": {
+    "service_worker": "service.ts",
+    "type": "module"
+  },
   "content_scripts": [
    {
-     "matches": ["*://hdfilme.cx/submit-coupon"],
-     "js": ["content-scripts/submit-coupon.ts"]
+     "matches": ["*://*/*"],
+     "include_globs": ["*hdfilme*", "*xcine*"],
+     "js": ["content-scripts/submit-coupon-hdf-xci.ts"]
    }
  ]
 }
